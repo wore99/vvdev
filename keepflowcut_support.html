@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Help and support for KeepFlow Cut.">
+    <title>KeepFlow Cut - Support</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --background: #090c0b;
+            --surface: #121816;
+            --surface-raised: #18201d;
+            --border: #2b3732;
+            --text: #f4f7f5;
+            --muted: #a3aca7;
+            --accent: #36d576;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background:
+                linear-gradient(90deg, transparent 49.8%, rgba(54, 213, 118, 0.05) 50%, transparent 50.2%),
+                var(--background);
+        }
+
+        main {
+            width: min(900px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 56px 0;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 104px 1fr;
+            gap: 24px;
+            align-items: center;
+            margin-bottom: 48px;
+        }
+
+        .app-icon {
+            display: block;
+            width: 104px;
+            height: 104px;
+            border-radius: 22px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38);
+        }
+
+        h1 {
+            margin: 0 0 4px;
+            font-size: clamp(36px, 7vw, 62px);
+            line-height: 1;
+        }
+
+        header p { margin: 10px 0 0; color: var(--muted); }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 36px;
+        }
+
+        .step, section {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--surface);
+        }
+
+        .step { padding: 20px; }
+        .step span { color: var(--accent); font-weight: 800; }
+        .step p { margin: 8px 0 0; color: var(--muted); }
+
+        section {
+            margin-bottom: 16px;
+            padding: 30px;
+        }
+
+        h2 { margin: 0 0 20px; font-size: 24px; }
+        h3 { margin: 24px 0 6px; color: var(--accent); font-size: 17px; }
+        h3:first-of-type { margin-top: 0; }
+        section p { margin: 0; color: #d3d9d6; }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--surface-raised);
+        }
+
+        .contact a {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 7px;
+            color: #07110c;
+            background: var(--accent);
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        footer {
+            padding-top: 24px;
+            color: var(--muted);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 640px) {
+            main { padding: 36px 0; }
+            header { grid-template-columns: 76px 1fr; gap: 16px; }
+            .app-icon { width: 76px; height: 76px; border-radius: 17px; }
+            .workflow { grid-template-columns: 1fr; }
+            section { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <header>
+        <img class="app-icon" src="keepflowcut-icon.png" alt="KeepFlow Cut app icon" width="104" height="104">
+        <div>
+            <h1>KeepFlow Cut</h1>
+            <p>Keep the moments that matter.</p>
+        </div>
+    </header>
+
+    <div class="workflow" aria-label="Editing workflow">
+        <div class="step"><span>01 / PLAY</span><p>Choose a video and play it once.</p></div>
+        <div class="step"><span>02 / KEEP</span><p>Hold KEEP during every moment worth saving.</p></div>
+        <div class="step"><span>03 / EXPORT</span><p>Review, reorder, merge, and save your clips.</p></div>
+    </div>
+
+    <section>
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>How do I create a clip?</h3>
+        <p>Choose a video, start playback, and hold the KEEP button for the part you want. Release the button at the end of the moment, then preview or save the marked segment.</p>
+
+        <h3>Can I combine clips from different videos?</h3>
+        <p>Yes. Save the moments you want to your project, open the project library, arrange the clips, and merge them into one video.</p>
+
+        <h3>Where are exported videos saved?</h3>
+        <p>Finished exports are saved to Photos in the KeepFlow Cut album. Your original videos remain untouched.</p>
+
+        <h3>Why can't I open or save a video?</h3>
+        <p>Open Settings &gt; Privacy &amp; Security &gt; Photos, select KeepFlow Cut, and allow access. Also confirm that your device has enough free storage for the exported video.</p>
+
+        <h3>Does editing require an internet connection?</h3>
+        <p>No. Video editing and project storage happen locally on your device.</p>
+    </section>
+
+    <section class="contact">
+        <div>
+            <h2>Contact Support</h2>
+            <p>Include your device model, iOS or iPadOS version, and a short description of the issue.</p>
+        </div>
+        <a href="mailto:vannyyu0@gmail.com?subject=KeepFlow%20Cut%20Support">Email Support</a>
+    </section>
+
+    <section>
+        <h2>Privacy</h2>
+        <p>KeepFlow Cut processes videos on your device and does not collect your personal data. Read the <a href="keepflowcut_privacy.html" style="color: var(--accent);">Privacy Policy</a>.</p>
+    </section>
+
+    <footer>&copy; 2026 KeepFlow Cut. All rights reserved.</footer>
+</main>
+</body>
+</html>
